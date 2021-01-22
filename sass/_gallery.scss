@@ -11,6 +11,7 @@
     //  for  object fit we have to mention both heigth and width
     //  we have use object fit bcz images does not fit into the grid cell completely.
     // bcz images want to maintain the aspect ratio ,we have to use object fit to place the images completely in the grid cell
+    //  to use object fit property on images,images should be inside a parent element
 
     width: 100%;
     height: 100%;
