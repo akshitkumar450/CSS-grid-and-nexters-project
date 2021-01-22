@@ -146,8 +146,23 @@ body {
   font-style: italic; }
 
 .homes {
-  background-color: #101d2c;
-  grid-column: center-start/center-end; }
+  grid-column: center-start/center-end;
+  margin: 15rem 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 7rem;
+  background-color: #f9f7f6; }
+  .homes .home__img {
+    width: 100%; }
+  .homes .home__like {
+    height: 2rem;
+    width: 2rem;
+    fill: #c69963; }
+  .homes .home__location svg, .homes .home__rooms svg, .homes .home__area svg, .homes .home__price svg {
+    height: 2rem;
+    width: 2rem;
+    fill: #c69963; }
 
 .gallery {
   background-color: #54483a;
