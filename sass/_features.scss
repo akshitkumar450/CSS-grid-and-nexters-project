@@ -1,4 +1,36 @@
 .features {
-  background-color: $color-grey-dark-2;
   grid-column: center-start/center-end;
+
+  margin: 15rem 0;
+  display: grid;
+  // grid-template-columns: repeat(3, 1fr);
+
+  //  for responsive design
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-template-rows: repeat(2, 1fr);
+  grid-gap: 6rem;
+  align-items: start;
+}
+
+.feature {
+  // each feature is also a grid ,,so that we can position the icon and text
+  display: grid;
+  grid-template-columns: min-content 1fr;
+  // grid-template-rows: min-content min-content;
+  grid-column-gap: 1rem;
+
+  align-items: center;
+
+  &__icon {
+    height: 4.5rem;
+    width: 4.5rem;
+    fill: $color-primary;
+    // grid-row: 1 / span 2;
+  }
+
+  &__text {
+    font-size: 1.7rem;
+
+    grid-column: 2/3;
+  }
 }
