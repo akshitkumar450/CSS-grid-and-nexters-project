@@ -4,6 +4,12 @@
   grid-column: sidebar-start/sidebar-end;
   grid-row: 1/-1;
 
+  @media only screen and (max-width: 62.5em) {
+    grid-column: 1/-1;
+    grid-row: 1/2;
+    justify-content: flex-end;
+  }
+
   display: flex;
   justify-content: center;
 
@@ -30,6 +36,10 @@
 
     &::after {
       transform: translateY(1.3rem);
+    }
+
+    @media only screen and (max-width: 62.5em) {
+      margin-right: 2rem;
     }
   }
 }

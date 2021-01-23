@@ -19,6 +19,13 @@ body {
   display: grid;
   grid-template-rows: 80vh min-content 40vw min-content min-content min-content;
   grid-template-columns: [sidebar-start] 8rem [sidebar-end full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; }
+  @media only screen and (max-width: 62.5em) {
+    .container {
+      grid-template-rows: 6rem 80vh min-content 40vw min-content min-content min-content;
+      grid-template-columns: [full-start] minmax(6rem, 1fr) [center-start] repeat(8, [col-start] minmax(min-content, 14rem) [col-end]) [center-end] minmax(6rem, 1fr) [full-end]; } }
+  @media only screen and (max-width: 50em) {
+    .container {
+      grid-template-rows: 6rem calc(100vh-6rem) min-content min-content min-content min-content min-content min-content; } }
 
 .heading-1, .heading-2, .heading-3, .heading-4 {
   font-family: "Josefin Sans", sans-serif;
@@ -85,6 +92,11 @@ body {
   grid-row: 1/-1;
   display: flex;
   justify-content: center; }
+  @media only screen and (max-width: 62.5em) {
+    .sidebar {
+      grid-column: 1/-1;
+      grid-row: 1/2;
+      justify-content: flex-end; } }
   .sidebar .nav-btn {
     border-radius: 0;
     border: none;
@@ -102,6 +114,9 @@ body {
       transform: translateY(-1.5rem); }
     .sidebar .nav-btn::after {
       transform: translateY(1.3rem); }
+    @media only screen and (max-width: 62.5em) {
+      .sidebar .nav-btn {
+        margin-right: 2rem; } }
 
 .header {
   background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg");
@@ -112,6 +127,9 @@ body {
   flex-direction: column;
   align-items: center;
   justify-content: space-around; }
+  @media only screen and (max-width: 50em) {
+    .header {
+      grid-column: 1/-1; } }
   .header__info {
     display: flex;
     flex-direction: column;
@@ -144,6 +162,9 @@ body {
   grid-row-gap: 2rem;
   justify-items: center;
   justify-content: center; }
+  @media only screen and (max-width: 50em) {
+    .realtors {
+      grid-column: 1/-1; } }
 
 .realtor {
   display: grid;
@@ -151,6 +172,12 @@ body {
   grid-column-gap: 2rem;
   grid-row-gap: 5vh;
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .realtor {
+      grid-template-columns: repeat(3, min-content max-content); } }
+  @media only screen and (max-width: 37.5em) {
+    .realtor {
+      grid-template-columns: min-content max-content; } }
   .realtor img {
     height: 8rem;
     width: 8rem;
@@ -191,6 +218,10 @@ body {
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(6, 1fr);
   align-items: center; }
+  @media only screen and (max-width: 50em) {
+    .story__pictures {
+      grid-column: 1/-1;
+      padding: 3rem; } }
 
 .story__img--1 {
   width: 100%;
@@ -211,6 +242,10 @@ body {
   display: grid;
   align-content: center;
   justify-items: start; }
+  @media only screen and (max-width: 50em) {
+    .story__content {
+      grid-column: 1/-1;
+      grid-row: 5/6; } }
 
 .story__text {
   font-size: 1.4rem;
