@@ -25,9 +25,10 @@ body {
   font-weight: 400; }
 
 .heading-1 {
-  font-size: 1.6rem;
-  color: #c69963;
-  text-transform: uppercase; }
+  font-size: 3rem;
+  color: #f9f7f6;
+  text-transform: uppercase;
+  line-height: 1; }
 
 .heading-2 {
   font-size: 4rem;
@@ -103,12 +104,63 @@ body {
       transform: translateY(1.3rem); }
 
 .header {
-  background-color: #54483a;
-  grid-column: full-start/col-end 6; }
+  background-image: linear-gradient(rgba(16, 29, 44, 0.9), rgba(16, 29, 44, 0.9)), url("../img/hero.jpeg");
+  background-size: cover;
+  background-position: center;
+  grid-column: full-start/col-end 6;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-around; }
+  .header__info {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin-left: -10rem; }
+    .header__info .heading-1 {
+      margin: 2rem 0; }
+  .header__logo {
+    height: 3rem; }
+  .header__seen-text {
+    color: #fff;
+    margin-bottom: -1rem;
+    font-size: 1.5rem; }
+    .header__seen-text::before, .header__seen-text::after {
+      content: "";
+      height: 1px;
+      display: block;
+      background-color: #fff; }
+  .header__seen-logo img {
+    margin: 0 3rem;
+    height: 2.5rem;
+    filter: brightness(70%); }
 
 .realtors {
   background-color: #101d2c;
-  grid-column: col-start 7 / full-end; }
+  grid-column: col-start 7 / full-end;
+  padding: 3rem;
+  display: grid;
+  align-content: center;
+  grid-row-gap: 2rem;
+  justify-items: center;
+  justify-content: center; }
+
+.realtor {
+  display: grid;
+  grid-template-columns: min-content max-content;
+  grid-column-gap: 2rem;
+  grid-row-gap: 5vh;
+  align-items: center; }
+  .realtor img {
+    height: 8rem;
+    width: 8rem;
+    border-radius: 50%; }
+  .realtor__name {
+    font-size: 1.6rem;
+    color: #fff;
+    text-transform: capitalize; }
+  .realtor__sold {
+    color: wheat; }
 
 .features {
   grid-column: center-start/center-end;
@@ -297,6 +349,7 @@ body {
     color: #fff;
     font-size: 1.4rem;
     margin-top: 6rem;
-    margin: 0 auto;
+    margin-left: auto;
+    margin-right: auto;
     text-align: center;
     width: 70%; }
